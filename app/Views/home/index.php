@@ -36,6 +36,9 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
         </ul>
+        <ul class="navbar-nav">
+          <p id='dashboard-title' class="h3 mb-0">Covid 19 dan Ekonomi</p>
+        </ul>
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
@@ -117,14 +120,9 @@
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <div class="content-header">
+        <div class="content-header py-1">
           <div class="container-fluid">
-            <div class="row mb-2">
-              <div class="col-sm-6">
-                <h1 class="m-0">Covid 19 dan Ekonomi</h1>
-              </div><!-- /.col -->
-              <div class="col-sm-6">
-              </div><!-- /.col -->
+            <div class="row mb-1">
             </div><!-- /.row -->
           </div><!-- /.container-fluid -->
         </div>
