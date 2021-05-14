@@ -170,7 +170,6 @@
 
         <!-- Update Laman -->
         <script>
-            updateActiveMenu('<?=$dashboard?>dash');
             updateDashTitle('<?=$judul?>');
         </script>
     </body>
