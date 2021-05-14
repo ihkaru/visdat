@@ -12,12 +12,12 @@ class Dashboard extends BaseController
 	}
 
 	public function covid(){
-
+		return view('dash/covid');
 	}
 
 	public function ekonomi()
 	{
-		
+		return view('dash/ekonomi');
 	}
 
 }
