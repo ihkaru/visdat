@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>AdminLTE 3 | Dashboard 3</title>
+        <title><?=$judul?> | D.E.C.I.</title>
 
         <!-- Google Font: Source Sans Pro -->
         <link rel="stylesheet"
@@ -25,6 +25,18 @@
   * sidebar-collapse
   * sidebar-mini
 -->
+    <script>
+        function updateActiveMenu(elementid) {
+            ['indexdash', 'coviddash', 'ekonomidash'].forEach(element => {
+                document.getElementById(element).classList.remove("active")
+            });
+            document.getElementById(elementid).classList.toggle("active")
+        }
+
+        function updateDashTitle(title) {
+            document.getElementById('dashboard-title').innerHTML = title;
+        }
+    </script>
 
     <body class="hold-transition sidebar-mini">
         <div class="wrapper">
@@ -75,19 +87,19 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="/" class="nav-link active">
+                                        <a id='indexdash' href="/" class="nav-link active">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Covid 19 dan Ekonomi</p>
+                                            <p>Ekonomi dan Covid 19</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/covid" class="nav-link">
+                                        <a id='coviddash' href="/covid" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Covid 19</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/ekonomi" class="nav-link">
+                                        <a id='ekonomidash' href="/ekonomi" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Ekonomi</p>
                                         </a>
@@ -155,6 +167,12 @@
         <script src="<?=base_url()?>/vendor/adminlte/dist/js/demo.js"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="<?=base_url()?>/vendor/adminlte/dist/js/pages/dashboard3.js"></script>
+
+        <!-- Update Laman -->
+        <script>
+            updateActiveMenu('<?=$dashboard?>dash');
+            updateDashTitle('<?=$judul?>');
+        </script>
     </body>
 
 </html>

@@ -268,4 +268,5 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
 <?= $this->endSection() ?>

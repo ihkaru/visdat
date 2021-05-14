@@ -8,16 +8,28 @@ class Dashboard extends BaseController
 {
 	public function index()
 	{
-		return view('dash/index');
+		$data = [
+			'dashboard'=>'index',
+			'judul' => 'Ekonomi dan Covid 19'
+		];
+		return view('dash/'.$data['dashboard'],$data);
 	}
 
 	public function covid(){
-		return view('dash/covid');
+		$data = [
+			'dashboard'=>'covid',
+			'judul' => 'Covid 19'
+		];
+		return view('dash/'.$data['dashboard'],$data);
 	}
 
 	public function ekonomi()
 	{
-		return view('dash/ekonomi');
+		$data = [
+			'dashboard'=>'ekonomi',
+			'judul' => 'Ekonomi'
+		];
+		return view('dash/'.$data['dashboard'],$data);
 	}
 
 }
