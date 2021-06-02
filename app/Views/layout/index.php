@@ -27,16 +27,14 @@
 -->
     <script>
         function updateActiveMenu(elementid) {
-            ['indexdash', 'coviddash', 'ekonomidash'].forEach(element => {
-                document.getElementById(element).classList.remove("active")
-            });
-            document.getElementById(elementid).classList.toggle("active")
+            document.getElementById(elementid).classList.add('active');
         }
 
         function updateDashTitle(title) {
             document.getElementById('dashboard-title').innerHTML = title;
         }
     </script>
+
 
     <body class="hold-transition sidebar-mini">
         <div class="wrapper">
@@ -78,46 +76,24 @@
                             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                             <li class="nav-item menu-open">
-                                <a href="#" class="nav-link active">
+                                <a href="/" class="nav-link">
                                     <i class="nav-icon fas fa-tachometer-alt"></i>
                                     <p>
                                         Dashboard
-                                        <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a id='indexdash' href="/" class="nav-link active">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Ekonomi dan Covid 19</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a id='coviddash' href="/covid" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Covid 19</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a id='ekonomidash' href="/ekonomi" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Ekonomi</p>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/sumber" id='sumber-link' class="nav-link">
                                     <i class="nav-icon fas fa-copy"></i>
                                     <p>
                                         Sumber Data
-                                        <span class="badge badge-info right">6</span>
                                     </p>
                                 </a>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/kami" id='kami-link' class="nav-link">
                                     <i class="nav-icon fas fa-edit"></i>
                                     <p>
                                         Tentang Kami
@@ -140,15 +116,6 @@
                 <!-- Control sidebar content goes here -->
             </aside>
             <!-- /.control-sidebar -->
-
-            <!-- Main Footer -->
-            <footer class="main-footer">
-                <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-                All rights reserved.
-                <div class="float-right d-none d-sm-inline-block">
-                    <b>Version</b> 3.1.0
-                </div>
-            </footer>
         </div>
         <!-- ./wrapper -->
 
@@ -171,6 +138,7 @@
         <!-- Update Laman -->
         <script>
             updateDashTitle('<?=$judul?>');
+            updateActiveMenu('<?=$activenav?>-link');
         </script>
     </body>
 

@@ -35,6 +35,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Dashboard::index');
 $routes->get('/covid', 'Dashboard::covid');
 $routes->get('/ekonomi', 'Dashboard::ekonomi');
+$routes->get('/kami', 'Pages::kami');
+$routes->get('/sumber', 'Pages::sumber');
+
 
 /*
  * --------------------------------------------------------------------

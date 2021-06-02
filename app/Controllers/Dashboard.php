@@ -10,7 +10,8 @@ class Dashboard extends BaseController
 	{
 		$data = [
 			'dashboard'=>'index',
-			'judul' => 'Ekonomi dan Covid 19'
+			'judul' => 'Ekonomi dan Covid 19 Indonesia (Maret 2020 - Maret 2021)',
+			'activenav'=>'index'
 		];
 		return view('dash/'.$data['dashboard'],$data);
 	}
@@ -18,7 +19,8 @@ class Dashboard extends BaseController
 	public function covid(){
 		$data = [
 			'dashboard'=>'covid',
-			'judul' => 'Covid 19'
+			'judul' => 'Covid 19',
+			'activenav'=>'covid'
 		];
 		return view('dash/'.$data['dashboard'],$data);
 	}
@@ -27,7 +29,8 @@ class Dashboard extends BaseController
 	{
 		$data = [
 			'dashboard'=>'ekonomi',
-			'judul' => 'Ekonomi'
+			'judul' => 'Ekonomi',
+			'activenav'=>'ekonomi'
 		];
 		return view('dash/'.$data['dashboard'],$data);
 	}
