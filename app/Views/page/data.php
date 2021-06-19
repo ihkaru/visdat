@@ -35,9 +35,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h3>Data Harian Nilai Tukar USD terhadap IDR</h3>
-                            <p>Data berasal dari Morningstar for Currency and Coinbase for Cryptocurrency. Metode
-                                pengumpulan data dilakukan dengan menggunakan formula (=Currency) pada google
-                                spreadsheet yang secara otomatis men-generate data exchange rate dari sumber yang ada.
+                            <p>Data berasal dari Google Finance. Metode pengumpulan data dilakukan dengan menggunakan
+                                formula (=Currency) pada google spreadsheet yang secara otomatis men-generate data
+                                exchange rate dari sumber yang ada.
                             </p>
 
                         </div>
